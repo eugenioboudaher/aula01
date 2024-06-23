@@ -1,15 +1,11 @@
-const button1 = document.querySelector('#triangulo');
+const button = document.querySelector('#inputbutton');
 
-button1.addEventListener('click', () => {
-    let altura = document.querySelector('#altura').value;
-    let largura = document.querySelector('#largura').value;
-    document.querySelector('#triangulop').textContent = (altura * largura) / 2
-})
+button.addEventListener('click', () => {
+    let salario = document.querySelector("#inputsalario").value;
+    document.querySelector('#salariobruto').textContent = salario;
+    document.querySelector('#inss').textContent = salario * 0.08;
+    document.querySelector('#sindicato').textContent = salario * 0.05;
+    document.querySelector('#salarioliquido').textContent = salario - (salario * 0.08) - (salario * 0.05);
+    
 
-const button2 = document.querySelector('#retangulo');
-
-button2.addEventListener('click', () => {
-    let altura = document.querySelector('#altura1').value;
-    let largura = document.querySelector('#largura1').value;
-    document.querySelector('#retangulop').textContent = (altura * largura)
 })
